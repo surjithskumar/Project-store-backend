@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 
 exports.register=async(req,res)=>{
     console.log("inside register function");
-    res.status(200).json("Register Request Received") 
+    // res.status(200).json("Register Request Received") 
     const{username,email,password}=req.body
 
     try {
