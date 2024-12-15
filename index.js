@@ -3,16 +3,16 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const router = require('./Route/route')
+require('./DB/connection')
 
 const pfServer=express()
 
 pfServer.use(cors())
-// initialize before router (data reaaching in router)
-pfServer.use(express.json())
+// initialize before router (data reaching in router)
+pfServer.use(express.json()) 
 pfServer.use(router)
 
-//localhost 3000 is busy
-const PORT = 3001
+const PORT = 3000
 
 pfServer.listen(PORT,()=>{
     console.log(`pf-Server started running at ${PORT} & waiting for a client request`);
