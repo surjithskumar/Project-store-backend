@@ -9,7 +9,7 @@ const pfServer=express()
 
 pfServer.use(cors())
 // initialize before router (data reaching in router)
-pfServer.use(express.json()) 
+pfServer.use(express.json())
 pfServer.use(router)
 
 const PORT = 3000
